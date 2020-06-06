@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=Citizens.css.map */
+.Citizens__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Citizens__container--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Citizens__container--block .box {
+  border: 2px solid black;
+  width: 25%;
+}
+
+.Citizens__container--block .box .citiz {
+  width: 80%;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.Citizens__container--block .box .fa-gem {
+  color: #12CBC4;
+}
+
+.Citizens__container--block .box .fa-diamond {
+  color: #EA2027;
+}
+
+.Citizens__container--block .box:nth-child(3) {
+  width: 10%;
+}
+/*# sourceMappingURL=Citizens.css.map */

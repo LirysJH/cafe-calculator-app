@@ -1,17 +1,17 @@
 .App {
-  margin: 0;
-  padding: 0;
+  margin: auto;
   text-align: center;
+  width: 90%;
 }
 
 .note { /* span item */
   color:#e74c3c;
 }
 
-.mycafe {  /* link to mycafe web-site */
+.mycafeLink, .mailto {  /* 1 - link to mycafe web-site; 2 - mail to my email */
   color: #fff;
 }
 
-.mycafe:hover {
+.mycafeLink:hover, .mailto:hover {
   color: #e67e22;
 }
