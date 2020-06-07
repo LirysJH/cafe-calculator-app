@@ -8,12 +8,14 @@
         &--block {
             display: flex;
             position: relative;
-            width: 60%;
+            width: 50%;
+            height: 40px;
             align-items: center;
 
             .box {
-                border: 2px solid black;
-                width: 25%;
+                display: flex;
+                padding: 5px 10px;
+                align-items: center;
 
                 .citiz {
                     width: 80%;
@@ -22,17 +24,31 @@
                     padding: 5px 10px;
                 }
 
-                .fa-gem {
-                    color: #12CBC4;
-                }
-
-                .fa-diamond {
-                    color: #EA2027;
+                .icon {
+                    height: 18px;
+                    width:  18px;
+                    margin: 0 8px;
                 }
             }
 
-            .box:nth-child(3) {
-                width: 10%;
+            .label-box {
+                width: 90px;
+
+                .label-ct {
+                    font-weight: bold;
+                }
+
+                .label-ct-1 {
+                    color: gold;
+                }
+
+                .label-ct-2 {
+                    color: #C0C0C0;
+                }
+
+                .label-ct-3 {
+                    color: #cd7f32;
+                }
             }
         }
     }

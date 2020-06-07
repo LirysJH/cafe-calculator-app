@@ -12,7 +12,7 @@ class App extends Component {
         {/*
           <Loader />
         */}
-        <h2>Attention!</h2>
+        <h3>Attention! Non-commercial usage only</h3>
         <p>
           This is <span className="note">unofficial</span> prototype of
           &nbsp;
@@ -28,6 +28,10 @@ class App extends Component {
               href="mailto:snslirys@gmail.com?subject=Awards Calculator">
                 Lirys
           </a>
+          .
+        </p>
+        <p>
+          No personal data is used or saved here.
         </p>
 
         {/*

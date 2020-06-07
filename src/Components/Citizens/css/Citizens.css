@@ -16,15 +16,21 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 60%;
+  width: 50%;
+  height: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .Citizens__container--block .box {
-  border: 2px solid black;
-  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Citizens__container--block .box .citiz {
@@ -34,15 +40,29 @@
   padding: 5px 10px;
 }
 
-.Citizens__container--block .box .fa-gem {
-  color: #12CBC4;
+.Citizens__container--block .box .icon {
+  height: 18px;
+  width: 18px;
+  margin: 0 8px;
 }
 
-.Citizens__container--block .box .fa-diamond {
-  color: #EA2027;
+.Citizens__container--block .label-box {
+  width: 90px;
 }
 
-.Citizens__container--block .box:nth-child(3) {
-  width: 10%;
+.Citizens__container--block .label-box .label-ct {
+  font-weight: bold;
+}
+
+.Citizens__container--block .label-box .label-ct-1 {
+  color: gold;
+}
+
+.Citizens__container--block .label-box .label-ct-2 {
+  color: #C0C0C0;
+}
+
+.Citizens__container--block .label-box .label-ct-3 {
+  color: #cd7f32;
 }
 /*# sourceMappingURL=Citizens.css.map */

@@ -20,6 +20,9 @@ const Calculator = (props) => {
         </div>
       </section>
       <hr />
+      <img className="icon icon-cup" src="https://i.imgur.com/ZlvUter.png" alt="cup" />
+      <img className="icon icon-task" src="https://i.imgur.com/JPaeM6P.png" alt="task" />
+      
       <hr />
       <Citizens />
     </div>
