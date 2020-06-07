@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './css/App.css';
 import Citizens from './Components/Citizens/Citizens';
-import Loader from './Components/Loader/Loader';
+import Prizes from './Components/Prizes/Prizes';
+//import Loader from './Components/Loader/Loader';
 
 class App extends Component {
 
@@ -62,69 +63,83 @@ class App extends Component {
         {/*
           <Loader />
         */}
-        <h3>Attention! Non-commercial usage only</h3>
-        <p>
-          This is <span className="note">unofficial</span> prototype of
-          &nbsp;
-          <a className="mycafeLink" href="https://mycafe.space"
-            target="_blank"
-            rel="noopener noreferrer">
-              Online Calculator
-          </a>
-          &nbsp;
-          made by
-          &nbsp;
-          <a className="mailto"
-              href="mailto:snslirys@gmail.com?subject=Awards Calculator">
-                Lirys
-          </a>
-          .
-        </p>
-        <p>
-          No personal data is used or saved here.
-        </p>
+        <header>
+          <h3>Attention! Non-commercial usage only</h3>
+          <p>
+            This is <span className="note">unofficial</span> prototype of
+            &nbsp;
+            <a className="mycafeLink" href="https://mycafe.space"
+              target="_blank"
+              rel="noopener noreferrer">
+                Online Calculator
+            </a>
+            &nbsp;
+            made by
+            &nbsp;
+            <a className="mailto"
+                href="mailto:snslirys@gmail.com?subject=Awards Calculator">
+                  Lirys
+            </a>
+            .
+          </p>
+          <p>
+            No personal data is used or saved here.
+          </p>
+        </header>
 
         {/*
           TODO:
+          - smooth upside navigation 
           - language switch button
-          - day/night mode switch button
+          - day/night mode switch button ? necessary ?
         */}
-        <hr />
         
-        <section>
-        <p>How would you like to calculate awards?</p>
-        <div className="buttonsBox">
-          <button className="buttonsBox__button button-tasks"
-                  onClick={this.toggleTasksState}
-                  style={{backgroundColor: this.state.tasksButtonBackground}}>
-            BY TASKS
-          </button>
-          <button className="buttonsBox__button button-cups"
-                  onClick={this.toggleCupsState}
-                  style={{backgroundColor: this.state.cupsButtonBackground}} >
-            BY CUPS
-          </button>
-          {/*
-          <button className="buttonsBox__button button-50-50">
-            50/50
-          </button>
-          */}
-        </div>
-      </section>
-      <hr />
-      <img className="icon icon-cup" src="https://i.imgur.com/ZlvUter.png" alt="cup" />
-      <img className="icon icon-task" src="https://i.imgur.com/JPaeM6P.png" alt="task" />
-      
-      <hr />
-      { this.state.tasksState && (
-        <Citizens tasksState={this.state.tasksState}
-                  cupsState={this.state.cupsState} />
-      )}
+        <main>
+          <hr />
 
-      { this.state.cupsState && (
-        <Citizens tasksState={this.state.tasksState}
-                  cupsState={this.state.cupsState} />
-      )}
+          <section>
+            <p>How would you like to calculate awards?</p>
+            <div className="buttonsBox">
+              <button className="buttonsBox__button button-tasks"
+                      onClick={this.toggleTasksState}
+                      style={{backgroundColor: this.state.tasksButtonBackground}}>
+                BY TASKS
+              </button>
+              <button className="buttonsBox__button button-cups"
+                      onClick={this.toggleCupsState}
+                      style={{backgroundColor: this.state.cupsButtonBackground}} >
+                BY CUPS
+              </button>
+              {/*
+              <button className="buttonsBox__button button-50-50">
+                50/50
+              </button>
+              */}
+            </div>
+          </section>
+
+          <hr />
+
+          <section>
+              <Prizes tasksState={this.state.tasksState}
+                      cupsState={this.state.cupsState} />
+          </section>
+
+          <hr />
+
+          <section>
+            { this.state.tasksState && (
+              <Citizens tasksState={this.state.tasksState}
+                        cupsState={this.state.cupsState} />
+            )}
+
+            { this.state.cupsState && (
+              <Citizens tasksState={this.state.tasksState}
+                        cupsState={this.state.cupsState} />
+            )}
+          </section>          
+        </main>
+        
       </div>
     )
   };

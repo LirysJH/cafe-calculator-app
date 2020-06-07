@@ -1,0 +1,27 @@
+.Prizes .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+}
+
+.Prizes .container .icon {
+  height: 18px;
+  width: 18px;
+  margin: 0 8px;
+}
+
+.Prizes .container .quantity-for-festival {
+  border-radius: 15px;
+  height: 20px;
+  width: 100px;
+  margin: 0 0 10px;
+}
+
+.Prizes .container .quantity-for-festival:nth-child(1) {
+  margin: 0;
+}
+/*# sourceMappingURL=Prizes.css.map */

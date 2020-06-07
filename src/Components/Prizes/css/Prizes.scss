@@ -1,0 +1,25 @@
+.Prizes {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        height: 30px;
+    
+        .icon {
+            height: 18px;
+            width:  18px;
+            margin: 0 8px;
+        }
+
+        .quantity-for-festival {
+            border-radius: 15px;
+            height: 20px;
+            width: 100px;
+            margin: 0 0 10px;
+        }
+
+        .quantity-for-festival:nth-child(1) {            
+            margin: 0;
+        }
+    }
+}
