@@ -46,6 +46,16 @@
   margin: 0 8px;
 }
 
+.Citizens__container--block .box:nth-child(2) {
+  /* input form */
+  width: 20px;
+}
+
+.Citizens__container--block .box:nth-child(3) {
+  /* input form */
+  width: 100px;
+}
+
 .Citizens__container--block .label-box {
   width: 90px;
 }

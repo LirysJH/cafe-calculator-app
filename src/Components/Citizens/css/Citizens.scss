@@ -31,6 +31,14 @@
                 }
             }
 
+            .box:nth-child(2) { /* input form */
+                width: 20px;
+            }
+
+            .box:nth-child(3) { /* input form */
+                width: 100px;
+            }
+
             .label-box {
                 width: 90px;
 
