@@ -14,7 +14,94 @@ class App extends Component {
       /* averageState: false,
       averageButtonBackground: ""  average = 50/50 */
       tasksButtonBackground: "",
-      cupsButtonBackground: ""      
+      cupsButtonBackground: "",
+      data: {
+        generalAmount: 11,
+        generalDiamondsAmount: 22,
+        generalRubiesAmount: 33
+      },
+      citizensData: [
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+        {
+          diamsCitiz: 0,
+          rubiesCitiz: 0,
+        },
+      ]
     }
   };
 
@@ -56,6 +143,33 @@ class App extends Component {
     }
   }
 
+  changeGeneralAmount = (event) => {
+
+    this.setState({
+      data:{
+        generalAmount: +event.target.value
+      }      
+    });
+  }
+
+  changeGeneralDiamondsAmount = (event) => {
+
+    this.setState({
+      data:{
+        generalDiamondsAmount: +event.target.value
+      }      
+    });
+  }
+
+  changeGeneralRubiesAmount = (event) => {
+
+    this.setState({
+      data:{
+        generalRubiesAmount: +event.target.value
+      }      
+    });
+  }
+
   render() {
 
     return(
@@ -89,7 +203,7 @@ class App extends Component {
 
         {/*
           TODO:
-          - smooth upside navigation 
+          - smooth top navigation 
           - language switch button
           - day/night mode switch button ? necessary ?
         */}
@@ -122,7 +236,13 @@ class App extends Component {
 
           <section>
               <Prizes tasksState={this.state.tasksState}
-                      cupsState={this.state.cupsState} />
+                      cupsState={this.state.cupsState}
+                      generalAmount={this.state.data.generalAmount}
+                      generalDiamondsAmount={this.state.data.generalDiamondsAmount}
+                      generalRubiesAmount={this.state.data.generalRubiesAmount}
+                      changeGeneralAmountHandler={this.changeGeneralAmount}
+                      changeGeneralDiamondsAmountHandler={this.changeGeneralDiamondsAmount}
+                      changeGeneralRubiesAmountHandler={this.changeGeneralRubiesAmount} />
           </section>
 
           <hr />

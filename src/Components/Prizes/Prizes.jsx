@@ -2,7 +2,12 @@ import React from 'react';
 import './css/Prizes.css';
 
 const Prizes = (props) => {
-    let {tasksState, cupsState}={...props};
+
+    let {tasksState,
+        cupsState,
+        generalAmount,
+        generalDiamondsAmount,
+        generalRubiesAmount}={...props};
 
     return (
         <div className="Prizes">
@@ -18,7 +23,11 @@ const Prizes = (props) => {
                     (
                     <img className="icon icon-task" src="https://i.imgur.com/JPaeM6P.png" alt="task" />
                 )}
-                <input className="quantity-for-festival" type="number"/>
+                <input className="quantity-for-festival"
+                        type="number"
+                        name="generalAmount"
+                        value={generalAmount}
+                        onChange={props.changeGeneralAmountHandler} />
             </div>
             <p>
                 Enter general quantity of diamonds and rubies,
@@ -29,13 +38,21 @@ const Prizes = (props) => {
                     <img className="icon icon-diamond"
                         src="https://i.imgur.com/0VHOYxn.png"
                         alt="diamond" />
-                    <input className="quantity-for-festival" type="number"/>        
+                    <input className="quantity-for-festival"
+                            type="number"
+                            name="generalDiamondsAmount"
+                            value={generalDiamondsAmount}
+                            onChange={props.changeGeneralDiamondsAmountHandler}  />        
                 </div>
                 <div>
                     <img className="icon icon-ruby"
                         src="https://i.imgur.com/9SCLNcC.png"
                         alt="ruby" />
-                    <input className="quantity-for-festival" type="number"/>        
+                    <input className="quantity-for-festival"
+                            type="number"
+                            name="generalRubiesAmount"
+                            value={generalRubiesAmount}
+                            onChange={props.changeGeneralRubiesAmountHandler} />        
                 </div>                
             </div>
         </div>
