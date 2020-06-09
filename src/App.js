@@ -16,90 +16,90 @@ class App extends Component {
       tasksButtonBackground: "",
       cupsButtonBackground: "",
       data: {
-        generalAmount: 11,
-        generalDiamondsAmount: 22,
-        generalRubiesAmount: 33
+        generalAmount: 0,
+        generalDiamondsAmount: 0,
+        generalRubiesAmount: 0
       },
       citizensData: [
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
         {
-          diamsCitiz: 0,
-          rubiesCitiz: 0,
+          diamsEarned: 0,
+          rubiesEarned: 0,
         },
       ]
     }
@@ -250,14 +250,16 @@ class App extends Component {
           <section>
             { this.state.tasksState && (
               <Citizens tasksState={this.state.tasksState}
-                        cupsState={this.state.cupsState} />
+                        cupsState={this.state.cupsState}
+                        trophies={this.state.citizensData} />
             )}
 
             { this.state.cupsState && (
               <Citizens tasksState={this.state.tasksState}
-                        cupsState={this.state.cupsState} />
+                        cupsState={this.state.cupsState}
+                        trophies={this.state.citizensData} />
             )}
-          </section>          
+          </section>
         </main>
         
       </div>

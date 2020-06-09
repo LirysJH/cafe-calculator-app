@@ -1,3 +1,8 @@
+.Prizes p {
+  margin: 10px 0;
+  padding: 0;
+}
+
 .Prizes .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,7 +10,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 30px;
+  height: 40px;
 }
 
 .Prizes .container .icon {
@@ -14,16 +19,19 @@
   margin: 0 8px;
 }
 
+.Prizes .container .icon-diamond {
+  color: #00cec9;
+}
+
+.Prizes .container .icon-ruby {
+  color: #d63031;
+}
+
 .Prizes .container .quantity-for-festival {
   border-radius: 15px;
   height: 20px;
   width: 100px;
-  margin: 0 0 10px;
   padding: 5px 10px;
   outline: none;
-}
-
-.Prizes .container .quantity-for-festival:nth-child(1) {
-  margin: 0;
 }
 /*# sourceMappingURL=Prizes.css.map */

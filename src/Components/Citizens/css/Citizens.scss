@@ -29,6 +29,14 @@
                     width:  18px;
                     margin: 0 8px;
                 }
+
+                .icon-diamond {
+                    color: #00cec9;
+                }
+
+                .icon-ruby {
+                    color: #d63031;
+                }
             }
 
             .box:nth-child(2) { /* input form */
@@ -44,10 +52,11 @@
 
                 .label-ct {
                     font-weight: bold;
+                    color: #fff;
                 }
 
                 .label-ct-1 {
-                    color: gold;
+                    color:gold;
                 }
 
                 .label-ct-2 {

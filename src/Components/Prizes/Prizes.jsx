@@ -3,11 +3,13 @@ import './css/Prizes.css';
 
 const Prizes = (props) => {
 
-    let {tasksState,
-        cupsState,
-        generalAmount,
-        generalDiamondsAmount,
-        generalRubiesAmount}={...props};
+    let {
+            tasksState,
+            cupsState,
+            generalAmount,
+            generalDiamondsAmount,
+            generalRubiesAmount
+        } = {...props};
 
     return (
         <div className="Prizes">
@@ -17,11 +19,11 @@ const Prizes = (props) => {
             <div className="container">
                 {cupsState &&
                     (
-                    <img className="icon icon-cup" src="https://i.imgur.com/ZlvUter.png" alt="cup" />
+                    <i className="fas fa-trophy icon icon-cup"></i>
                 )}
                 {tasksState &&
                     (
-                    <img className="icon icon-task" src="https://i.imgur.com/JPaeM6P.png" alt="task" />
+                    <i className="fas fa-tasks icon icon-task"></i>
                 )}
                 <input className="quantity-for-festival"
                         type="number"
@@ -35,9 +37,7 @@ const Prizes = (props) => {
             </p>
             <div className="container">
                 <div>
-                    <img className="icon icon-diamond"
-                        src="https://i.imgur.com/0VHOYxn.png"
-                        alt="diamond" />
+                    <i className="fas fa-gem icon icon-diamond"></i>
                     <input className="quantity-for-festival"
                             type="number"
                             name="generalDiamondsAmount"
@@ -45,9 +45,7 @@ const Prizes = (props) => {
                             onChange={props.changeGeneralDiamondsAmountHandler}  />        
                 </div>
                 <div>
-                    <img className="icon icon-ruby"
-                        src="https://i.imgur.com/9SCLNcC.png"
-                        alt="ruby" />
+                    <i className="fas fa-gem icon icon-ruby"></i>
                     <input className="quantity-for-festival"
                             type="number"
                             name="generalRubiesAmount"

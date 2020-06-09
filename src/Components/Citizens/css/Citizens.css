@@ -46,6 +46,14 @@
   margin: 0 8px;
 }
 
+.Citizens__container--block .box .icon-diamond {
+  color: #00cec9;
+}
+
+.Citizens__container--block .box .icon-ruby {
+  color: #d63031;
+}
+
 .Citizens__container--block .box:nth-child(2) {
   /* input form */
   width: 20px;
@@ -62,6 +70,7 @@
 
 .Citizens__container--block .label-box .label-ct {
   font-weight: bold;
+  color: #fff;
 }
 
 .Citizens__container--block .label-box .label-ct-1 {
