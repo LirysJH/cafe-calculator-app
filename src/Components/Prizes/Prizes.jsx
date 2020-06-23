@@ -17,14 +17,17 @@ const Prizes = (props) => {
                 Enter number of completed tasks or received cups at the last festival. 
             </p>
             <div className="container">
-                {cupsState &&
-                    (
-                    <i className="fas fa-trophy icon icon-cup"></i>
-                )}
-                {tasksState &&
-                    (
-                    <i className="fas fa-tasks icon icon-task"></i>
-                )}
+                <div className="icon-box">
+                    {cupsState &&
+                        (
+                            <i className="fas fa-trophy icon icon-cup"></i>
+                    )}
+                    {tasksState &&
+                        (
+                            <i className="fas fa-tasks icon icon-task"></i>
+                    )}
+                </div>
+                
                 <input className="quantity-for-festival"
                         type="number"
                         name="generalAmount"

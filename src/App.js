@@ -238,7 +238,7 @@ class App extends Component {
             title="Click to get to the top" >
               <i className="fas fa-arrow-up"></i>
         </a>
-        
+
         <header>
           <h3>Attention! Non-commercial usage only</h3>
           <p>
@@ -265,10 +265,8 @@ class App extends Component {
 
         {/*
           TODO:
-          - smooth top navigation 
           - language switch button
-          - correct mathematical calculations
-          - fix icons near to general amount input field
+          - fix mathematical calculations
         */}
         
         <main>
