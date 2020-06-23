@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {Component} from 'react';
 import './css/App.css';
 import Citizens from './Components/Citizens/Citizens';
@@ -16,92 +17,132 @@ class App extends Component {
       tasksButtonBackground: "",
       cupsButtonBackground: "",
       data: {
-        generalAmount: 0,
-        generalDiamondsAmount: 0,
-        generalRubiesAmount: 0
-      },
-      citizensData: [
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-        {
-          diamsEarned: 0,
-          rubiesEarned: 0,
-        },
-      ]
+        generalAmount: 64000,
+        generalDiamondsAmount: 350,
+        generalRubiesAmount: 70,
+        citizensData: [
+          {
+            id: 1,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 2500
+          },
+          {
+            id: 2,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 3,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 4,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 5,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 6,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 7,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 8,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 9,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 10,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 11,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 12,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 13,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 14,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 15,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 16,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 17,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 18,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 19,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          },
+          {
+            id: 20,
+            diamsEarned: 0,
+            rubiesEarned: 0,
+            personalResult: 0
+          }
+        ]
+      }
     }
   };
 
@@ -170,6 +211,20 @@ class App extends Component {
     });
   }
 
+  changeValueHandle = (id, key, value) => {
+    this.setState({
+      data:
+      {
+        citizensData: this.state.data.citizensData.map(
+          (item) =>
+            item.id === id
+              ? { ...item, [key]: value }
+              : item
+        )
+      }
+    });
+  }
+
   render() {
 
     return(
@@ -177,6 +232,13 @@ class App extends Component {
         {/*
           <Loader />
         */}
+
+        <a href="#"
+            className="backToTopLink"
+            title="Click to get to the top" >
+              <i className="fas fa-arrow-up"></i>
+        </a>
+        
         <header>
           <h3>Attention! Non-commercial usage only</h3>
           <p>
@@ -185,7 +247,7 @@ class App extends Component {
             <a className="mycafeLink" href="https://mycafe.space"
               target="_blank"
               rel="noopener noreferrer">
-                Online Calculator
+                Melsoft Games Online Calculator
             </a>
             &nbsp;
             made by
@@ -205,7 +267,8 @@ class App extends Component {
           TODO:
           - smooth top navigation 
           - language switch button
-          - day/night mode switch button ? necessary ?
+          - correct mathematical calculations
+          - fix icons near to general amount input field
         */}
         
         <main>
@@ -251,13 +314,17 @@ class App extends Component {
             { this.state.tasksState && (
               <Citizens tasksState={this.state.tasksState}
                         cupsState={this.state.cupsState}
-                        trophies={this.state.citizensData} />
+                        trophies={this.state.data.citizensData} />
             )}
 
             { this.state.cupsState && (
               <Citizens tasksState={this.state.tasksState}
                         cupsState={this.state.cupsState}
-                        trophies={this.state.citizensData} />
+                        trophies={this.state.data.citizensData}
+                        generalAmount={this.state.data.generalAmount}
+                        generalDiamondsAmount={this.state.data.generalDiamondsAmount}
+                        generalRubiesAmount={this.state.data.generalRubiesAmount}
+                        onChangeValueHandle={this.changeValueHandle} />
             )}
           </section>
         </main>

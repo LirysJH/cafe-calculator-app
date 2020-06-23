@@ -1,8 +1,7 @@
 .App {
-    margin: auto;
-    text-align: center;
-    width: 90%;
-  }
+  margin: auto;
+  text-align: center;
+  width: 90%;
   
   .note { /* span item */
     color:#e74c3c;
@@ -34,4 +33,35 @@
         box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
         transform: translateY(-0.25em);
     }
+  }
+
+  .backToTopLink {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    right: 30px;
+    bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-style: 24px;
+    background: none;
+    transition: background .3s ease-in-out;
+
+    .fa-arrow-up {
+      color: #fff;
+    }
+  }
+
+  .backToTopLink:hover {
+
+    background: #00cec9;
+
+    .fa-arrow-up {
+      color: #fdcb6e;
+    }
+  }
 }
